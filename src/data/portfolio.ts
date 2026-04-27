@@ -10,7 +10,7 @@ export const portfolio = {
   initials: "T",             // Tes initiales (affichées si pas de photo)
   title: "Data Engineer · Data Analyst",
   tagline: "Étudiant Master | En recherche d'alternance",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo.",
+  bio: "Étudiant à l'École 42, je travaille sur des sujets data — de la collecte à la visualisation. Formé par la pratique et les projets, j'aime comprendre comment les données circulent, se transforment et deviennent utiles. Je cherche une alternance pour mettre ces compétences au service d'un environnement réel.",
 
   // Ajoute ta photo dans /public/photo.jpg puis remplace null par "/photo.jpg"
   photo: "/images/photo.jpg" as string | null,

@@ -112,10 +112,10 @@ export default function ProjectsPage() {
               </div>
 
               {/* Etapes du pipeline dans un conteneur Docker */}
-              <div className="relative border border-cyan-500/40 rounded-xl p-4 pt-6">
-                <div className="absolute -top-3.5 left-3 flex items-center gap-1.5 px-2 bg-[#0d1117]">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
-                  <span className="text-sm font-bold text-cyan-400">{project.infra}</span>
+              <div className="relative border border-cyan-500/40 rounded-xl p-4 pt-6 mt-4">
+                <div className="absolute -top-3 left-3 flex items-center gap-1.5 px-2 bg-[#0d1117]">
+                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
+                  <span className="text-xs font-bold text-cyan-400">{project.infra}</span>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                   {project.pipeline.map((step, i) => (
