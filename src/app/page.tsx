@@ -7,7 +7,7 @@ export default function Home() {
     <div className="space-y-20">
 
       {/* ── Hero ── */}
-      <section className="flex flex-col md:flex-row items-center gap-12 pt-4">
+      <section className="flex flex-col md:flex-row items-center gap-8 pt-4">
 
         {/* Texte */}
         <div className="flex-1 space-y-5">
@@ -20,8 +20,12 @@ export default function Home() {
               {portfolio.name}
             </h1>
           </div>
-          <p className="text-xl text-[#8b949e] font-medium">{portfolio.title}</p>
-          <p className="text-[#8b949e] leading-relaxed max-w-lg">{portfolio.bio}</p>
+          <p className="text-xl font-semibold">
+            <span className="text-blue-400">Data Engineer</span>
+            <span className="text-[#8b949e] mx-2">·</span>
+            <span className="text-purple-400">Data Analyst</span>
+          </p>
+          <p className="text-[#c9d1d9] leading-relaxed max-w-lg">{portfolio.bio}</p>
           <div className="flex gap-3 pt-2 flex-wrap">
             <Link
               href="/projects"
