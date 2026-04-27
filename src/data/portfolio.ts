@@ -13,7 +13,7 @@ export const portfolio = {
   bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo.",
 
   // Ajoute ta photo dans /public/photo.jpg puis remplace null par "/photo.jpg"
-  photo: null as string | null,
+  photo: "/images/photo.jpg" as string | null,
 
   // --- Compétences ---
   skills: [
@@ -53,14 +53,21 @@ export const portfolio = {
       orchestrator: "Apache Airflow",
       infra: "Docker",
       tech: ["Python", "PySpark", "dbt", "MinIO", "PostgreSQL", "Airflow", "Docker", "Metabase"],
-      github: "", // Lien GitHub du projet
+      github: "https://github.com/Silveratis0922/SpaceKO---Simulation-and-Analysis",
+      // Place tes screenshots dans public/images/ et ajoute-les ici :
+      // { src: "/images/dashboard.png", caption: "Dashboard Metabase" }
+      images: [
+        { src: "/images/workflow.png",     caption: "Architecture du workflow" },
+        { src: "/images/Dashboard_1.png",  caption: "Dashboard Metabase" },
+        { src: "/images/Dashboard_2.png",  caption: "Dashboard Metabase" },
+      ] as { src: string; caption?: string }[],
     },
   ],
 
   // --- Contact ---
   contact: {
-    linkedin: "", // Ex: https://linkedin.com/in/ton-profil
-    github:   "", // Ex: https://github.com/ton-username
-    cv:       "", // Ex: https://drive.google.com/... ou /cv.pdf
+    linkedin: "https://www.linkedin.com/in/tristan-chantroux",
+    github:   "https://github.com/Silveratis0922", // Ex: https://github.com/ton-username
+    cv:       "/fichiers/cv.pdf", // Ex: https://drive.google.com/... ou /cv.pdf
   },
 }

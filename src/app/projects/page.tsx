@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { portfolio } from '@/data/portfolio'
 
 const colorMap: Record<string, string> = {
@@ -56,6 +57,44 @@ export default function ProjectsPage() {
 
             {/* Description */}
             <p className="text-[#8b949e] leading-relaxed">{project.description}</p>
+
+            {/* Galerie de screenshots */}
+            {project.images.length > 0 && (
+              <div className="space-y-3">
+                <p className="text-xs font-semibold text-[#8b949e] uppercase tracking-wider">
+                  Aperçu
+                </p>
+                <div className={`grid gap-3 ${
+                  project.images.length === 1 ? 'grid-cols-1' :
+                  project.images.length === 2 ? 'grid-cols-2' :
+                  'grid-cols-2 md:grid-cols-3'
+                }`}>
+                  {project.images.map((img, i) => (
+                    <a
+                      key={i}
+                      href={img.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative block overflow-hidden rounded-xl border border-[#21262d] hover:border-[#30363d] transition-colors duration-200"
+                    >
+                      <div className="relative aspect-video w-full bg-[#161b22]">
+                        <Image
+                          src={img.src}
+                          alt={img.caption ?? `Screenshot ${i + 1}`}
+                          fill
+                          className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                        />
+                      </div>
+                      {img.caption && (
+                        <p className="px-3 py-2 text-xs text-[#8b949e] bg-[#161b22] border-t border-[#21262d]">
+                          {img.caption}
+                        </p>
+                      )}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Visualisation du pipeline */}
             <div className="space-y-3">
