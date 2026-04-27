@@ -55,7 +55,9 @@ export const portfolio = {
         { tool: "Metabase",      role: "Visualisation",   color: "teal"   },
       ],
       orchestrator: "Apache Airflow",
+      orchestratorDescription: "Planifie et automatise toutes les étapes du pipeline",
       infra: "Docker",
+      infraDescription: "Chaque service tourne dans un conteneur isolé, garantissant un environnement reproductible",
       tech: ["Python", "PySpark", "dbt", "MinIO", "PostgreSQL", "Airflow", "Docker", "Metabase"],
       github: "https://github.com/Silveratis0922/SpaceKO---Simulation-and-Analysis",
       // Place tes screenshots dans public/images/ et ajoute-les ici :

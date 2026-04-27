@@ -103,17 +103,19 @@ export default function ProjectsPage() {
               </p>
 
               {/* Airflow : orchestrateur */}
-              <div className="inline-flex items-center gap-2.5 bg-orange-500/10 border border-orange-500/40 rounded-lg px-4 py-2">
-                <div className="w-2 h-2 rounded-full bg-orange-400 shrink-0" />
-                <span className="text-orange-400 font-semibold text-sm">{project.orchestrator}</span>
-                <span className="text-[#8b949e] text-xs">— orchestration & planification</span>
+              <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-xl px-4 py-3">
+                <p className="text-sm text-center text-[#8b949e]">
+                  Orchestré par{' '}
+                  <span className="text-indigo-400 font-semibold">{project.orchestrator}</span>
+                  {' '}— {project.orchestratorDescription}
+                </p>
               </div>
 
               {/* Etapes du pipeline dans un conteneur Docker */}
-              <div className="relative border border-dashed border-[#30363d] rounded-xl p-4">
-                <div className="absolute -top-3 left-3 flex items-center gap-1.5 px-2 bg-[#0d1117]">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
-                  <span className="text-xs font-bold text-blue-400">{project.infra}</span>
+              <div className="relative border border-cyan-500/40 rounded-xl p-4 pt-6">
+                <div className="absolute -top-3.5 left-3 flex items-center gap-1.5 px-2 bg-[#0d1117]">
+                  <div className="w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
+                  <span className="text-sm font-bold text-cyan-400">{project.infra}</span>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                   {project.pipeline.map((step, i) => (
@@ -126,6 +128,9 @@ export default function ProjectsPage() {
                     </div>
                   ))}
                 </div>
+                <p className="text-xs text-[#8b949e] mt-4 pt-3 border-t border-[#21262d]">
+                  {project.infraDescription}
+                </p>
               </div>
             </div>
 
