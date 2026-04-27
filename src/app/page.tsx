@@ -67,10 +67,15 @@ export default function Home() {
           <p className="text-[#8b949e] mt-1 text-sm">Technologies et outils que je maîtrise</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {portfolio.skills.map((cat) => (
+          {portfolio.skills.map((cat, i) => {
+            const isLast = i === portfolio.skills.length - 1
+            const isAlone = isLast && portfolio.skills.length % 2 !== 0
+            return (
             <div
               key={cat.category}
-              className="bg-[#0d1117] border border-[#21262d] rounded-xl p-5 hover:border-[#30363d] transition-colors duration-200"
+              className={`bg-[#0d1117] border border-[#21262d] rounded-xl p-5 hover:border-[#30363d] transition-colors duration-200 ${
+                isAlone ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''
+              }`}
             >
               <h3 className="text-white font-semibold text-sm mb-3">{cat.category}</h3>
               <div className="flex flex-wrap gap-2">
@@ -84,7 +89,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          ))}
+          )})}
         </div>
       </section>
 

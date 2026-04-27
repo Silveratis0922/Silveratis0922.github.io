@@ -19,7 +19,7 @@ export const portfolio = {
   skills: [
     {
       category: "Langages",
-      items: ["Python", "SQL"],
+      items: ["Python", "SQL", "Shell"],
     },
     {
       category: "Data Engineering",
@@ -32,6 +32,10 @@ export const portfolio = {
     {
       category: "Analyse & Visualisation",
       items: ["Pandas", "Metabase"],
+    },
+    {
+      category: "Outils & Productivité",
+      items: ["Git", "Google Sheet", "Excel", "Google App Scripts"],
     },
   ],
 

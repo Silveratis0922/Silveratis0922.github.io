@@ -103,32 +103,30 @@ export default function ProjectsPage() {
               </p>
 
               {/* Airflow : orchestrateur */}
-              <div className="bg-[#161b22] border border-dashed border-orange-500/30 rounded-xl px-4 py-3">
-                <p className="text-xs text-center text-[#8b949e]">
-                  Orchestré par{' '}
-                  <span className="text-orange-400 font-semibold">{project.orchestrator}</span>
-                  {' '}— planifie et automatise toutes les étapes
-                </p>
+              <div className="inline-flex items-center gap-2.5 bg-orange-500/10 border border-orange-500/40 rounded-lg px-4 py-2">
+                <div className="w-2 h-2 rounded-full bg-orange-400 shrink-0" />
+                <span className="text-orange-400 font-semibold text-sm">{project.orchestrator}</span>
+                <span className="text-[#8b949e] text-xs">— orchestration & planification</span>
               </div>
 
-              {/* Etapes du pipeline */}
-              <div className="flex flex-wrap items-center gap-2 pt-1">
-                {project.pipeline.map((step, i) => (
-                  <div key={step.tool} className="flex items-center gap-2">
-                    <div className={`border rounded-lg px-4 py-2.5 text-center min-w-[100px] ${colorMap[step.color]}`}>
-                      <div className="text-xs font-bold">{step.tool}</div>
-                      <div className="text-xs opacity-60 mt-0.5">{step.role}</div>
+              {/* Etapes du pipeline dans un conteneur Docker */}
+              <div className="relative border border-dashed border-[#30363d] rounded-xl p-4">
+                <div className="absolute -top-3 left-3 flex items-center gap-1.5 px-2 bg-[#0d1117]">
+                  <div className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
+                  <span className="text-xs font-bold text-blue-400">{project.infra}</span>
+                </div>
+                <div className="flex flex-wrap items-center gap-2">
+                  {project.pipeline.map((step, i) => (
+                    <div key={step.tool} className="flex items-center gap-2">
+                      <div className={`border rounded-lg px-4 py-2.5 text-center min-w-[100px] ${colorMap[step.color]}`}>
+                        <div className="text-xs font-bold">{step.tool}</div>
+                        <div className="text-xs opacity-60 mt-0.5">{step.role}</div>
+                      </div>
+                      {i < project.pipeline.length - 1 && <ArrowIcon />}
                     </div>
-                    {i < project.pipeline.length - 1 && <ArrowIcon />}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-
-              <p className="text-xs text-[#8b949e]">
-                Infrastructure :{' '}
-                <span className="text-[#e6edf3] font-medium">{project.infra}</span>
-                {' '}— chaque outil tourne dans un conteneur isolé
-              </p>
             </div>
 
             {/* Stack technique */}
