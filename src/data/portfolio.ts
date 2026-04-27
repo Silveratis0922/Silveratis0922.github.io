@@ -4,18 +4,18 @@
 // ============================================================
 
 export const portfolio = {
-  // --- Identite ---
-  name: "Tristan",           // Ton prenom
+  // --- Identité ---
+  name: "Tristan",           // Ton prénom
   lastName: "Nom",           // Ton nom de famille
-  initials: "T",             // Tes initiales (affiches si pas de photo)
+  initials: "T",             // Tes initiales (affichées si pas de photo)
   title: "Data Engineer · Data Analyst",
-  tagline: "Etudiant Master | En recherche d'alternance",
+  tagline: "Étudiant Master | En recherche d'alternance",
   bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo.",
 
   // Ajoute ta photo dans /public/photo.jpg puis remplace null par "/photo.jpg"
   photo: null as string | null,
 
-  // --- Competences ---
+  // --- Compétences ---
   skills: [
     {
       category: "Langages",
@@ -26,7 +26,7 @@ export const portfolio = {
       items: ["PySpark", "Apache Airflow", "dbt", "Docker"],
     },
     {
-      category: "Bases de donnees & Stockage",
+      category: "Bases de données & Stockage",
       items: ["PostgreSQL", "MinIO"],
     },
     {
@@ -40,14 +40,14 @@ export const portfolio = {
     {
       id: "pipeline-e2e",
       title: "Pipeline Data End-to-End",
-      subtitle: "De la donnee brute a la visualisation",
+      subtitle: "De la donnée brute à la visualisation",
       description:
-        "Un pipeline de donnees complet et automatise qui simule un flux reel en entreprise. Les donnees brutes sont collectees et stockees, puis transformees et nettoyees, avant d'etre mises a disposition pour l'analyse et la visualisation — le tout orchestre automatiquement sans intervention manuelle.",
+        "Un pipeline de données complet et automatisé qui simule un flux réel en entreprise. Les données brutes sont collectées et stockées, puis transformées et nettoyées, avant d'être mises à disposition pour l'analyse et la visualisation — le tout orchestré automatiquement sans intervention manuelle.",
       pipeline: [
         { tool: "Python",        role: "Collecte",        color: "blue"   },
         { tool: "MinIO",         role: "Stockage",        color: "orange" },
         { tool: "PySpark + dbt", role: "Transformation",  color: "purple" },
-        { tool: "PostgreSQL",    role: "Entrepot",        color: "green"  },
+        { tool: "PostgreSQL",    role: "Entrepôt",        color: "green"  },
         { tool: "Metabase",      role: "Visualisation",   color: "teal"   },
       ],
       orchestrator: "Apache Airflow",

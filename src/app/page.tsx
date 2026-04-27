@@ -63,8 +63,8 @@ export default function Home() {
       {/* ── Competences ── */}
       <section className="space-y-6">
         <div>
-          <h2 className="text-2xl font-bold text-white">Competences</h2>
-          <p className="text-[#8b949e] mt-1 text-sm">Technologies et outils que je maitrise</p>
+          <h2 className="text-2xl font-bold text-white">Compétences</h2>
+          <p className="text-[#8b949e] mt-1 text-sm">Technologies et outils que je maîtrise</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {portfolio.skills.map((cat) => (

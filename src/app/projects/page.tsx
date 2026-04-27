@@ -26,7 +26,7 @@ export default function ProjectsPage() {
 
       <div>
         <h1 className="text-3xl font-bold text-white">Projets</h1>
-        <p className="text-[#8b949e] mt-2">Mes realisations personnelles et academiques</p>
+        <p className="text-[#8b949e] mt-2">Mes réalisations personnelles et académiques</p>
       </div>
 
       <div className="space-y-8">
@@ -60,15 +60,15 @@ export default function ProjectsPage() {
             {/* Visualisation du pipeline */}
             <div className="space-y-3">
               <p className="text-xs font-semibold text-[#8b949e] uppercase tracking-wider">
-                Flux de donnees
+                Flux de données
               </p>
 
               {/* Airflow : orchestrateur */}
               <div className="bg-[#161b22] border border-dashed border-orange-500/30 rounded-xl px-4 py-3">
                 <p className="text-xs text-center text-[#8b949e]">
-                  Orchestre par{' '}
+                  Orchestré par{' '}
                   <span className="text-orange-400 font-semibold">{project.orchestrator}</span>
-                  {' '}— planifie et automatise toutes les etapes
+                  {' '}— planifie et automatise toutes les étapes
                 </p>
               </div>
 
@@ -88,14 +88,14 @@ export default function ProjectsPage() {
               <p className="text-xs text-[#8b949e]">
                 Infrastructure :{' '}
                 <span className="text-[#e6edf3] font-medium">{project.infra}</span>
-                {' '}— chaque outil tourne dans un conteneur isole
+                {' '}— chaque outil tourne dans un conteneur isolé
               </p>
             </div>
 
             {/* Stack technique */}
             <div className="space-y-2">
               <p className="text-xs font-semibold text-[#8b949e] uppercase tracking-wider">
-                Technologies utilisees
+                Technologies utilisées
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((t) => (

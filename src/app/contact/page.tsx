@@ -39,7 +39,7 @@ export default function ContactPage() {
     {
       label: 'CV',
       href: contact.cv,
-      description: 'Telecharger mon curriculum vitae',
+      description: 'Télécharger mon curriculum vitae',
       gradient: 'from-purple-600 to-purple-700',
       icon: <CVIcon />,
     },
@@ -75,7 +75,7 @@ export default function ContactPage() {
               <h3 className="text-white font-semibold">{link.label}</h3>
               <p className="text-[#8b949e] text-sm mt-1">{link.description}</p>
               {!available && (
-                <p className="text-xs text-[#8b949e] mt-2 italic">A configurer</p>
+                <p className="text-xs text-[#8b949e] mt-2 italic">À configurer</p>
               )}
             </Tag>
           )
