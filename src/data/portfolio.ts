@@ -65,8 +65,8 @@ export const portfolio = {
       // { src: "/images/dashboard.png", caption: "Dashboard Metabase" }
       images: [
         { src: "/images/workflow.png",     caption: "Architecture du workflow" },
-        { src: "/images/Dashboard_1.png",  caption: "Dashboard Metabase" },
-        { src: "/images/Dashboard_2.png",  caption: "Dashboard Metabase" },
+        { src: "/images/Dashboard_1.png",  caption: "Analyse des gains & classements" },
+        { src: "/images/Dashboard_2.png",  caption: "Dotations estimées vs réelles" },
       ] as { src: string; caption?: string }[],
     },
     {
