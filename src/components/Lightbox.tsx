@@ -75,10 +75,10 @@ export default function Lightbox({ images }: { images: ImageItem[] }) {
           )}
 
           <div
-            className="relative max-w-4xl w-full mx-20"
+            className="relative max-w-5xl w-full mx-20"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full aspect-video">
+            <div className="relative w-full h-[78vh]">
               <Image
                 src={images[index].src}
                 alt={images[index].caption ?? `Screenshot ${index + 1}`}
