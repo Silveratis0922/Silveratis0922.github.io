@@ -54,14 +54,28 @@ export default function Lightbox({ images }: { images: ImageItem[] }) {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
           onClick={() => setOpen(false)}
         >
-          <button
-            className="absolute top-4 right-4 p-2 text-white/60 hover:text-white transition-colors"
-            onClick={() => setOpen(false)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <a
+              href={images[index].src}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="p-2 text-white/60 hover:text-white transition-colors"
+              title="Ouvrir en plein écran"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+            <button
+              className="p-2 text-white/60 hover:text-white transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
 
           {images.length > 1 && (
             <button
@@ -75,17 +89,15 @@ export default function Lightbox({ images }: { images: ImageItem[] }) {
           )}
 
           <div
-            className="relative max-w-5xl w-full mx-20"
+            className="flex flex-col items-center mx-20"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full h-[78vh]">
-              <Image
-                src={images[index].src}
-                alt={images[index].caption ?? `Screenshot ${index + 1}`}
-                fill
-                className="object-contain rounded-xl"
-              />
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={images[index].src}
+              alt={images[index].caption ?? `Screenshot ${index + 1}`}
+              className="max-w-[90vw] max-h-[85vh] rounded-xl"
+            />
             {images[index].caption && (
               <p className="text-center text-sm text-[#8b949e] mt-3">{images[index].caption}</p>
             )}
