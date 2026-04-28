@@ -10,7 +10,7 @@ export const portfolio = {
   initials: "T",             // Tes initiales (affichées si pas de photo)
   title: "Data Engineer · Data Analyst",
   tagline: "Étudiant Master | En recherche d'alternance",
-  bio: "Étudiant à l'École 42, je travaille sur des sujets data — de la collecte à la visualisation. Formé par la pratique et les projets, j'aime comprendre comment les données circulent, se transforment et deviennent utiles. Je cherche une alternance pour mettre ces compétences au service d'un environnement réel.",
+  bio: "Étudiant à l'École 42, je travaille sur des sujets data, de la collecte à la visualisation. Formé par la pratique et les projets, j'aime comprendre comment les données circulent, se transforment et deviennent utiles. Je cherche une alternance pour mettre ces compétences au service d'un environnement réel.",
 
   // Ajoute ta photo dans /public/photo.jpg puis remplace null par "/photo.jpg"
   photo: "/images/photo.jpg" as string | null,
@@ -46,7 +46,7 @@ export const portfolio = {
       title: "Pipeline Data End-to-End",
       subtitle: "De la donnée brute à la visualisation",
       description:
-        "Un pipeline de données complet et automatisé qui simule un flux réel en entreprise. Les données brutes sont collectées et stockées, puis transformées et nettoyées, avant d'être mises à disposition pour l'analyse et la visualisation — le tout orchestré automatiquement sans intervention manuelle.",
+        "Un pipeline de données complet et automatisé qui simule un flux réel en entreprise. Les données brutes sont collectées et stockées, puis transformées et nettoyées, avant d'être mises à disposition pour l'analyse et la visualisation, le tout orchestré automatiquement sans intervention manuelle.",
       pipelineLabel: "Flux de données",
       pipeline: [
         { tool: "Python",        role: "Collecte",        color: "blue"   },
@@ -74,7 +74,7 @@ export const portfolio = {
       title: "Bot de Trading Python",
       subtitle: "Architecture Python & intégration d'API",
       description:
-        "Projet d'apprentissage centré sur la structuration du code Python et la connexion à des API tierces. Le programme se connecte à MetaTrader pour accéder à un compte de trading, et à Telegram pour le monitoring et le contrôle à distance — permettant d'envoyer des commandes (pause, reprise, arrêt, rapport du jour) depuis n'importe où pendant que le programme tourne en arrière-plan.",
+        "Projet d'apprentissage centré sur la structuration du code Python et la connexion à des API tierces. Le programme se connecte à MetaTrader pour accéder à un compte de trading, et à Telegram pour le monitoring et le contrôle à distance, permettant d'envoyer des commandes (pause, reprise, arrêt, rapport du jour) depuis n'importe où pendant que le programme tourne en arrière-plan.",
       pipelineLabel: "Architecture technique",
       pipeline: [
         { tool: "MetaTrader API", role: "Connexion",  color: "blue"   },
