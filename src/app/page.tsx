@@ -81,6 +81,16 @@ export default function Home() {
                   </svg>
                 </a>
               )}
+              {portfolio.contact.email && (
+                <a href={`mailto:${portfolio.contact.email}`}
+                  className="w-9 h-9 flex items-center justify-center rounded-lg bg-[#ea4335] text-white hover:opacity-85 transition-opacity duration-200"
+                  title={portfolio.contact.email}
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </a>
+              )}
               {portfolio.contact.cv && (
                 <a href={portfolio.contact.cv} target="_blank" rel="noopener noreferrer"
                   className="w-9 h-10 flex flex-col items-center justify-center gap-0.5 rounded-lg bg-purple-600 text-white hover:opacity-85 transition-opacity duration-200"

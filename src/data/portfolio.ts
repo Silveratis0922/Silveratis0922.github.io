@@ -75,5 +75,6 @@ export const portfolio = {
     linkedin: "https://www.linkedin.com/in/tristan-chantroux",
     github:   "https://github.com/Silveratis0922", // Ex: https://github.com/ton-username
     cv:       "/fichiers/cv.pdf", // Ex: https://drive.google.com/... ou /cv.pdf
+    email:    "tchantro@student.42.fr",
   },
 }
