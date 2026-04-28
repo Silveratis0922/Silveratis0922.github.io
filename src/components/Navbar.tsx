@@ -3,9 +3,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const links = [
-  { href: '/',          label: 'Accueil'  },
-  { href: '/projects',  label: 'Projets'  },
-  { href: '/contact',   label: 'Contact'  },
+  { href: '/',         label: 'Accueil' },
+  { href: '/projects', label: 'Projets' },
 ]
 
 export default function Navbar() {
