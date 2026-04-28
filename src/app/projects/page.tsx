@@ -99,24 +99,43 @@ export default function ProjectsPage() {
             {/* Visualisation du pipeline */}
             <div className="space-y-3">
               <p className="text-xs font-semibold text-[#8b949e] uppercase tracking-wider">
-                Flux de données
+                {project.pipelineLabel}
               </p>
 
               {/* Airflow : orchestrateur */}
-              <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-xl px-4 py-3">
-                <p className="text-sm text-center text-[#8b949e]">
-                  Orchestré par{' '}
-                  <span className="text-indigo-400 font-semibold">{project.orchestrator}</span>
-                  {' '}— {project.orchestratorDescription}
-                </p>
-              </div>
-
-              {/* Etapes du pipeline dans un conteneur Docker */}
-              <div className="relative border border-cyan-500/40 rounded-xl p-4 pt-6 mt-4">
-                <div className="absolute -top-3 left-3 flex items-center gap-1.5 px-2 bg-[#0d1117]">
-                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
-                  <span className="text-xs font-bold text-cyan-400">{project.infra}</span>
+              {project.orchestrator && (
+                <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-xl px-4 py-3">
+                  <p className="text-sm text-center text-[#8b949e]">
+                    Orchestré par{' '}
+                    <span className="text-indigo-400 font-semibold">{project.orchestrator}</span>
+                    {' '}— {project.orchestratorDescription}
+                  </p>
                 </div>
+              )}
+
+              {/* Etapes du pipeline */}
+              {project.infra ? (
+                <div className="relative border border-cyan-500/40 rounded-xl p-4 pt-6 mt-4">
+                  <div className="absolute -top-3 left-3 flex items-center gap-1.5 px-2 bg-[#0d1117]">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
+                    <span className="text-xs font-bold text-cyan-400">{project.infra}</span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    {project.pipeline.map((step, i) => (
+                      <div key={step.tool} className="flex items-center gap-2">
+                        <div className={`border rounded-lg px-4 py-2.5 text-center min-w-[100px] ${colorMap[step.color]}`}>
+                          <div className="text-xs font-bold">{step.tool}</div>
+                          <div className="text-xs opacity-60 mt-0.5">{step.role}</div>
+                        </div>
+                        {i < project.pipeline.length - 1 && <ArrowIcon />}
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-xs text-[#8b949e] mt-4 pt-3 border-t border-[#21262d]">
+                    {project.infraDescription}
+                  </p>
+                </div>
+              ) : (
                 <div className="flex flex-wrap items-center gap-2">
                   {project.pipeline.map((step, i) => (
                     <div key={step.tool} className="flex items-center gap-2">
@@ -128,10 +147,7 @@ export default function ProjectsPage() {
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-[#8b949e] mt-4 pt-3 border-t border-[#21262d]">
-                  {project.infraDescription}
-                </p>
-              </div>
+              )}
             </div>
 
             {/* Stack technique */}

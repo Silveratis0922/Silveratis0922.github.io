@@ -47,6 +47,7 @@ export const portfolio = {
       subtitle: "De la donnée brute à la visualisation",
       description:
         "Un pipeline de données complet et automatisé qui simule un flux réel en entreprise. Les données brutes sont collectées et stockées, puis transformées et nettoyées, avant d'être mises à disposition pour l'analyse et la visualisation — le tout orchestré automatiquement sans intervention manuelle.",
+      pipelineLabel: "Flux de données",
       pipeline: [
         { tool: "Python",        role: "Collecte",        color: "blue"   },
         { tool: "MinIO",         role: "Stockage",        color: "orange" },
@@ -67,6 +68,26 @@ export const portfolio = {
         { src: "/images/Dashboard_1.png",  caption: "Dashboard Metabase" },
         { src: "/images/Dashboard_2.png",  caption: "Dashboard Metabase" },
       ] as { src: string; caption?: string }[],
+    },
+    {
+      id: "trading-bot",
+      title: "Bot de Trading Python",
+      subtitle: "Architecture Python & intégration d'API",
+      description:
+        "Projet d'apprentissage centré sur la structuration du code Python et la connexion à des API tierces. Le programme se connecte à MetaTrader pour accéder à un compte de trading, et à Telegram pour le monitoring et le contrôle à distance — permettant d'envoyer des commandes (pause, reprise, arrêt, rapport du jour) depuis n'importe où pendant que le programme tourne en arrière-plan.",
+      pipelineLabel: "Architecture technique",
+      pipeline: [
+        { tool: "MetaTrader API", role: "Connexion",  color: "blue"   },
+        { tool: "Python",         role: "Logique",    color: "purple" },
+        { tool: "Telegram API",   role: "Contrôle",   color: "teal"   },
+      ],
+      orchestrator: "",
+      orchestratorDescription: "",
+      infra: "",
+      infraDescription: "",
+      tech: ["Python", "MetaTrader5", "python-telegram-bot"],
+      github: "https://github.com/Silveratis0922/My_project",
+      images: [] as { src: string; caption?: string }[],
     },
   ],
 
