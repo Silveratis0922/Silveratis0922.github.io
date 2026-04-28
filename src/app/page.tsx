@@ -11,22 +11,22 @@ export default function Home() {
 
         {/* Texte */}
         <div className="flex-1 space-y-5">
-          <p className="text-sm font-medium text-blue-400 tracking-wider uppercase">
+          <p className="anim-1 text-sm font-medium text-blue-400 tracking-wider uppercase">
             {portfolio.tagline}
           </p>
-          <div>
+          <div className="anim-2">
             <h1 className="text-5xl font-bold text-white">Bonjour, je suis</h1>
             <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               {portfolio.name}
             </h1>
           </div>
-          <p className="text-xl font-semibold">
+          <p className="anim-3 text-xl font-semibold">
             <span className="text-blue-400">Data Engineer</span>
             <span className="text-[#8b949e] mx-2">·</span>
             <span className="text-purple-400">Data Analyst</span>
           </p>
-          <p className="text-[#c9d1d9] leading-relaxed max-w-lg">{portfolio.bio}</p>
-          <div className="flex gap-3 pt-2 flex-wrap">
+          <p className="anim-4 text-[#c9d1d9] leading-relaxed max-w-lg">{portfolio.bio}</p>
+          <div className="anim-5 flex gap-3 pt-2 flex-wrap">
             <Link
               href="/projects"
               className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-blue-500 hover:to-purple-500 transition-all duration-200"
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         {/* Photo */}
-        <div className="shrink-0">
+        <div className="anim-photo shrink-0">
           <div className="w-52 h-52 rounded-full p-[3px] bg-gradient-to-br from-blue-500 to-purple-600">
             <div className="w-full h-full rounded-full bg-[#0d1117] flex items-center justify-center overflow-hidden">
               {portfolio.photo ? (

@@ -23,7 +23,7 @@ const ArrowIcon = () => (
 
 export default function ProjectsPage() {
   return (
-    <div className="space-y-12">
+    <div className="anim-page space-y-12">
 
       <div>
         <h1 className="text-3xl font-bold text-white">Projets</h1>
