@@ -43,7 +43,7 @@ export const portfolio = {
   projects: [
     {
       id: "pipeline-e2e",
-      title: "Pipeline Data End-to-End",
+      title: "SpaceKO Pipeline & Analytics",
       subtitle: "De la donnée brute à la visualisation",
       description:
         "Un pipeline de données complet et automatisé qui simule un flux réel en entreprise. Les données brutes sont collectées et stockées, puis transformées et nettoyées, avant d'être mises à disposition pour l'analyse et la visualisation, le tout orchestré automatiquement sans intervention manuelle.",
@@ -60,7 +60,7 @@ export const portfolio = {
       infra: "Docker",
       infraDescription: "Chaque service tourne dans un conteneur isolé, garantissant un environnement reproductible",
       tech: ["Python", "PySpark", "dbt", "MinIO", "PostgreSQL", "Airflow", "Docker", "Metabase"],
-      github: "https://github.com/Silveratis0922/SpaceKO---Simulation-and-Analysis",
+      github: "https://github.com/Silveratis0922/SpaceKO-Pipeline-Analytics",
       // Place tes screenshots dans public/images/ et ajoute-les ici :
       // { src: "/images/dashboard.png", caption: "Dashboard Metabase" }
       images: [
