@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import { portfolio } from '@/data/portfolio'
+import Lightbox from '@/components/Lightbox'
 
 const colorMap: Record<string, string> = {
   blue:   'bg-blue-500/10 border-blue-500/30 text-blue-400',
@@ -64,35 +64,7 @@ export default function ProjectsPage() {
                 <p className="text-xs font-semibold text-[#8b949e] uppercase tracking-wider">
                   Aperçu
                 </p>
-                <div className={`grid gap-3 ${
-                  project.images.length === 1 ? 'grid-cols-1' :
-                  project.images.length === 2 ? 'grid-cols-2' :
-                  'grid-cols-2 md:grid-cols-3'
-                }`}>
-                  {project.images.map((img, i) => (
-                    <a
-                      key={i}
-                      href={img.src}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group relative block overflow-hidden rounded-xl border border-[#21262d] hover:border-[#30363d] transition-colors duration-200"
-                    >
-                      <div className="relative aspect-video w-full bg-[#161b22]">
-                        <Image
-                          src={img.src}
-                          alt={img.caption ?? `Screenshot ${i + 1}`}
-                          fill
-                          className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
-                        />
-                      </div>
-                      {img.caption && (
-                        <p className="px-3 py-2 text-xs text-[#8b949e] bg-[#161b22] border-t border-[#21262d]">
-                          {img.caption}
-                        </p>
-                      )}
-                    </a>
-                  ))}
-                </div>
+                <Lightbox images={project.images} />
               </div>
             )}
 
